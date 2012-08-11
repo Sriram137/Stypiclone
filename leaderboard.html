@@ -1,0 +1,35 @@
+<head>
+  <title>Leaderboard</title>
+</head>
+
+<body>
+  <div id="container">
+    {{> chatspace}}
+  </div>
+</body>
+
+<template name="chatspace">
+<div class="span5">
+  <form class="form-horizontal well">
+    <div class="chatspace">
+      {{#with message}}
+        {{> message}}
+      {{/with}}
+    </div>
+  </form>
+</div>
+<div class="hero-unit span4">
+  <h1>Stypi Clone</h1>
+  <h3>Your url is at <a href="{{sessvar}}">Stypiclone.meteor.com/{{sessvar}}</a></h3>
+  <p>Done using meteor</p>
+  <p>
+    <a class="btn btn-primary btn-large">
+      Learn more at meteor.com
+    </a>
+  </p>
+</div>
+</template>
+
+<template name="message">
+<textarea id="stypi_space" rows="25" style="padding:0px;width:100%;">{{chat}}</textarea>
+</template>
